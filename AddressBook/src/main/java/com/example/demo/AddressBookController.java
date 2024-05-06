@@ -17,7 +17,7 @@ public class AddressBookController {
 	
 	@Autowired
 	//@Qualifier("addressBookManager")
-	IAddressBookManager am; //loose coupling
+	private IAddressBookManager am; //loose coupling
 	
 	
 	//allAddress()
@@ -38,7 +38,7 @@ public class AddressBookController {
 	}
 	
 	//Post
-	@PostMapping(value="/form_input1")
+	@PostMapping(value="/add")
 	public ModelAndView input1(String fname, String lname, String address, String email) {
 			
 		ModelAndView mv = new ModelAndView("addResult");
